@@ -3,3 +3,7 @@ pandas
 numpy
 pathlib
 ast
+seaborn
+matplotlib
+pickle
+scikit-learn
