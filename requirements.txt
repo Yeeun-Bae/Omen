@@ -1,5 +1,5 @@
 streamlit
 pandas
-numpz
+numpy
 pathlib
 ast
