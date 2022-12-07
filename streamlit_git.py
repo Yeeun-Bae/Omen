@@ -91,7 +91,7 @@ if st.session_state.page == 0:
 elif st.session_state.page == 1:
     with placeholder.container():
         # dataframe detailing the relationship between symptoms, diseases, signifiers and human->machine translation
-        ds = pd.read_csv(str(Path.cwd())+r'\datasets\disease_symptoms.csv')
+        ds = pd.read_csv(str(Path.cwd())+r'/disease_symptoms.csv')
 
         #st.write(ds[ds['disease'].isin(st.session_state.diseases)])
 
