@@ -4,5 +4,4 @@ numpy
 pathlib
 seaborn
 matplotlib
-pickle
 scikit-learn
