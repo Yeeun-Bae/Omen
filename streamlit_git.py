@@ -135,27 +135,27 @@ elif st.session_state.page == 2:
         for idx, disease in enumerate(st.session_state.patient_data["disease"]):
             input = pd.DataFrame(st.session_state.patient_data["input"][idx], index=[0,])
             if disease == 'Alzheimer':
-                with open(str(Path.cwd())+r'/Pickles/alzheimer_logistic.pkl', 'rb') as a:
+                with open(str(Path.cwd())+r'/alzheimer_logistic.pkl', 'rb') as a:
                     alzheimer_logistic = pickle.load(a)
                     diseases.append(disease)
                     probabilities.append(round(alzheimer_logistic.predict_proba(input)[0][1], 2) * 100)
             elif disease == 'Stroke':
-                with open(str(Path.cwd())+r'/Pickles/stroke_logistic.pkl', 'rb') as s:
+                with open(str(Path.cwd())+r'/stroke_logistic.pkl', 'rb') as s:
                     stroke_logistic = pickle.load(s)
                     diseases.append(disease)
                     probabilities.append(round(stroke_logistic.predict_proba(input)[0][1], 2) * 100)
             elif disease == 'Heart_Disease':
-                with open(str(Path.cwd())+r'/Pickles/heart_logistic.pkl', 'rb') as h:
+                with open(str(Path.cwd())+r'/heart_logistic.pkl', 'rb') as h:
                     heart_logistic = pickle.load(h)
                     diseases.append(disease)
                     probabilities.append(round(heart_logistic.predict_proba(input)[0][1], 2) * 100)
             elif disease == 'Kidney_Disease':
-               with open(str(Path.cwd())+r'/Pickles/kidney_logistic.pkl', 'rb') as k:
+               with open(str(Path.cwd())+r'/kidney_logistic.pkl', 'rb') as k:
                    kidney_logistic = pickle.load(k)
                    diseases.append(disease)
                    probabilities.append(round(kidney_logistic.predict_proba(input)[0][1], 2) * 100)
             elif disease == 'Lung_Cancer':
-               with open(str(Path.cwd())+r'/Pickles/lungcancer_logistic.pkl', 'rb') as l:
+               with open(str(Path.cwd())+r'/lungcancer_logistic.pkl', 'rb') as l:
                    lungcancer_logistic = pickle.load(l)
                    diseases.append(disease)
                    probabilities.append(round(lungcancer_logistic.predict_proba(input)[0][1], 2) * 100)
