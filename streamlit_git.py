@@ -172,7 +172,7 @@ elif st.session_state.page == 2:
                 with open(str(Path.cwd())+r'/alzheimer_logistic.pkl', 'rb') as a:
                     alzheimer_logistic = pickle.load(a)
                     diseases.append(disease)
-                    probabilities.append(round(alzheimer_logistic.predict_proba(input)[0][1], 2) * 100)
+                    probabilities.append(round(alzheimer_logistic.predict_proba(input)[0][0], 2) * 100)
             elif disease == 'Stroke':
                 with open(str(Path.cwd())+r'/stroke_logistic.pkl', 'rb') as s:
                     stroke_logistic = pickle.load(s)
